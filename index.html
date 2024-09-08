@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simple CRUD Application</h1>
+    
+    <div class="form-container">
+        <input type="text" id="first_name" placeholder="First Name">
+        <input type="text" id="last_name" placeholder="Last Name">
+        <input type="number" id="age" placeholder="Age">
+        <select id="gender">
+            <option value="" disabled selected>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <input type="text" id="position" placeholder="Position">
+        <button onclick="addPerson()">Add</button>
+        <button id="updateBtn" class="hidden" onclick="updatePerson()">Update</button>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Position</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="personList">
+            <!-- Data will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
